@@ -21,9 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0b0f19] text-white`}
       >
-        {children}
+        <div className="max-w-[1200px] w-full mx-auto px-4 md:px-8">
+          {children}
+        </div>
       </body>
     </html>
   );
