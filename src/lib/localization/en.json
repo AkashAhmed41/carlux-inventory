@@ -16,6 +16,10 @@
     "VIEW_DETAILS": "View Details",
     "RESULT_FOUND": "{count} result found",
     "RESULTS_FOUND": "{count} results found",
-    "SHOWING_RESULTS_FOR": "Showing results for:"
+    "SHOWING_RESULTS_FOR": "Showing results for:",
+    "SORT_BY": "Sort by",
+    "SORT_DEFAULT": "Default",
+    "SORT_PRICE_ASC": "Price: Low to High",
+    "SORT_PRICE_DESC": "Price: High to Low"
   }
 }
