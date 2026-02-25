@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { fetchVehicleList } from "@/lib/services/VehicleService";
 import InventoryList from "@/components/inventory-list/InventoryList";
-import { getLocalizedText } from "@/lib/utils/CommonUtils";
+import HomepageSkeleton from "@/skeleton/HomepageSkeleton";
 
 async function HomepageContent() {
   const data = await fetchVehicleList();
@@ -12,15 +12,7 @@ async function HomepageContent() {
 
 export default function Home() {
   return (
-    <Suspense
-      fallback={
-        <main className="py-12">
-          <p className="text-gray-400">
-            {getLocalizedText("INVENTORY", "LOADING")}
-          </p>
-        </main>
-      }
-    >
+    <Suspense fallback={<HomepageSkeleton />}>
       <HomepageContent />
     </Suspense>
   );
