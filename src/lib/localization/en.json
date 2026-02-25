@@ -1,6 +1,11 @@
 {
+  "HEADER": {
+    "TITLE": "Carlux",
+    "TAGLINE": "Premium Automotive",
+    "SEARCH_PLACEHOLDER": "Search by title or brand name..."
+  },
   "INVENTORY": {
-    "TITLE": "Vehicle Inventory List",
+    "TITLE": "Vehicle list in Carlux",
     "TOTAL_VEHICLES": "Total {total} vehicles available currently in our inventory",
     "LOADING": "Loading vehicle inventory...",
     "EMPTY_TITLE": "No vehicles found",
@@ -8,6 +13,9 @@
     "REVIEWS": "reviews",
     "STOCK": "stock",
     "OFF": "OFF",
-    "VIEW_DETAILS": "View Details"
+    "VIEW_DETAILS": "View Details",
+    "RESULT_FOUND": "{count} result found",
+    "RESULTS_FOUND": "{count} results found",
+    "SHOWING_RESULTS_FOR": "Showing results for:"
   }
 }
