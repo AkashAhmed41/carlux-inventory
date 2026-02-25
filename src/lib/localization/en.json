@@ -1,0 +1,9 @@
+{
+  "INVENTORY": {
+    "TITLE": "Vehicle Inventory List",
+    "TOTAL_VEHICLES": "Total {total} vehicles available currently in our inventory",
+    "LOADING": "Loading vehicle inventory...",
+    "EMPTY_TITLE": "No vehicles found",
+    "EMPTY_DESCRIPTION": "It seems like our inventory is currently empty. Please check back later for new arrivals."
+  }
+}

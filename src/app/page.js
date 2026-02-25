@@ -1,16 +1,26 @@
 import { Suspense } from "react";
 import { fetchVehicleList } from "@/lib/services/VehicleService";
+import VehicleGrid from "@/components/inventory-list/VehicleGrid";
+import InventoryHeader from "@/components/inventory-list/InventoryHeader";
+import EmptyList from "@/components/common/EmptyList";
+import { isEmptyArray } from "@/lib/utils/ObjectUtils";
+import { getLocalizedText } from "@/lib/utils/CommonUtils";
 
 async function HomepageContent() {
   const data = await fetchVehicleList();
-  const { products, total, skip, limit } = data;
-
-  console.log("Fetched vehicle data:", { products, total, skip, limit });
+  const { products, total } = data;
 
   return (
     <main className="py-12">
-      <h1 className="text-3xl font-bold text-white">Vehicle Inventory</h1>
-      <p className="text-gray-400 mt-2">Total: {total} vehicles</p>
+      <InventoryHeader total={total} />
+      {isEmptyArray(products) ? (
+        <EmptyList
+          title={getLocalizedText("INVENTORY", "EMPTY_TITLE")}
+          description={getLocalizedText("INVENTORY", "EMPTY_DESCRIPTION")}
+        />
+      ) : (
+        <VehicleGrid products={products} />
+      )}
     </main>
   );
 }
@@ -20,7 +30,9 @@ export default function Home() {
     <Suspense
       fallback={
         <main className="py-12">
-          <p className="text-gray-400">Loading vehicle inventory...</p>
+          <p className="text-gray-400">
+            {getLocalizedText("INVENTORY", "LOADING")}
+          </p>
         </main>
       }
     >
