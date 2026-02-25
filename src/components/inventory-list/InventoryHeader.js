@@ -31,7 +31,7 @@ const InventoryHeader = ({
                 {". "}
                 {getLocalizedText("INVENTORY", "SHOWING_RESULTS_FOR")}{" "}
                 <span className="text-emerald-400 font-semibold">
-                  "{searchQuery}"
+                  &quot;{searchQuery}&quot;
                 </span>
               </>
             ) : (
