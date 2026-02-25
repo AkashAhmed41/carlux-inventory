@@ -1,5 +1,5 @@
 import React from "react";
-import VehicleCard from "./VehicleCard";
+import VehicleCard from "@/components/inventory-list/vehicle-card/VehicleCard";
 
 const VehicleGrid = ({ products }) => {
   return (
