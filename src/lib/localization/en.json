@@ -20,5 +20,11 @@
     "SORT_DEFAULT": "Default",
     "SORT_PRICE_ASC": "Price: Low to High",
     "SORT_PRICE_DESC": "Price: High to Low"
+  },
+  "ERROR": {
+    "TITLE": "Something went wrong",
+    "DESCRIPTION": "We encountered an error while loading the premium inventory. Please try again.",
+    "TRY_AGAIN": "Try Again",
+    "GO_HOME": "Go to Home"
   }
 }
